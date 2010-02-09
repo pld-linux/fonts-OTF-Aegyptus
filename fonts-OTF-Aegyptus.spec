@@ -2,10 +2,11 @@ Summary:	Free UCS font for Egyptian hieroglyphs
 Summary(pl.UTF-8):	Wolnodostępny font UCS dla hieroglifów egipskich
 Name:		fonts-OTF-Aegyptus
 Version:	3.11
+%define	_ver	%(echo %{version} | tr -d .)
 Release:	1
 License:	Freeware
 Group:		Fonts
-Source0:	http://users.teilar.gr/~g1951d/Aegyptus%{version}.zip
+Source0:	http://users.teilar.gr/~g1951d/Aegyptus%{_ver}.zip
 # Source0-md5:	de9426b4fbed2ce23d6121effce36ba9
 URL:		http://users.teilar.gr/~g1951d/
 BuildRequires:	unzip
@@ -30,7 +31,7 @@ Unicode Standard 5.2
 #TODO
 
 %prep
-%setup -q -n freefont-%{version}
+%setup -q -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
