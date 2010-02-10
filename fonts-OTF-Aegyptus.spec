@@ -33,6 +33,12 @@ Unicode Standard 5.2
 %prep
 %setup -q -c
 
+%build
+for i in *.txt; do
+	iconv -f utf16 -t utf8 < $i > $i.
+	mv -f $i. $i
+done
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{otffontsdir}
