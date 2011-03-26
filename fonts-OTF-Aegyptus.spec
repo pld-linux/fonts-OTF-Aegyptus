@@ -9,6 +9,7 @@ Group:		Fonts
 Source0:	http://users.teilar.gr/~g1951d/Aegyptus%{_ver}.zip
 # Source0-md5:	de9426b4fbed2ce23d6121effce36ba9
 URL:		http://users.teilar.gr/~g1951d/
+BuildRequires:	iconv
 BuildRequires:	unzip
 Requires(post,postun):	fontpostinst
 BuildArch:	noarch
